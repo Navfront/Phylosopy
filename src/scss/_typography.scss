@@ -1,0 +1,281 @@
+@import "_variables.scss";
+
+@mixin font-family {
+  font-family: "Manrope", "Arial", sans-serif;
+}
+
+@mixin typography-h1 {
+  @include font-family();
+  color: $color-primary;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105%; /* 94.5px */
+  text-transform: uppercase;
+}
+
+@mixin typography-h1-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105%; /* 84px */
+  text-transform: uppercase;
+}
+
+@mixin typography-h1-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 105%; /* 42px */
+  text-transform: uppercase;
+}
+
+@mixin typography-h2 {
+  @include font-family();
+  color: $color-primary;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 84px */
+}
+
+@mixin typography-h2-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 76.8px */
+}
+
+@mixin typography-h2-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 43.2px */
+}
+
+@mixin typography-h3 {
+  @include font-family();
+  color: $color-primary;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 60px */
+  letter-spacing: -1.44px;
+}
+
+@mixin typography-h3-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 60px */
+  letter-spacing: -1.44px;
+}
+
+@mixin typography-h3-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 40px */
+  letter-spacing: -0.96px;
+}
+
+@mixin typography-title {
+  @include font-family();
+  color: $color-primary;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 38.4px */
+}
+
+@mixin typography-title-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 38.4px */
+}
+
+@mixin typography-title-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 28.8px */
+}
+
+@mixin typography-subheading {
+  @include font-family();
+  color: $color-primary;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+}
+
+@mixin typography-subheading-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 24px */
+}
+
+@mixin typography-subheading-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%; /* 21.6px */
+}
+
+@mixin typography-medium {
+  @include font-family();
+  color: $color-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+
+@mixin typography-medium-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+
+@mixin typography-medium-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+}
+
+@mixin typography-regular {
+  @include font-family();
+  color: $color-primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+}
+
+@mixin typography-regular-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 19.2px */
+}
+
+@mixin typography-regular-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%; /* 16.8px */
+}
+
+@mixin typography-caption {
+  @include font-family();
+  color: $color-primary;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 15px */
+}
+
+@mixin typography-caption-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 15px */
+}
+
+@mixin typography-caption-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 15px */
+}
+
+@mixin typography-label {
+  @include font-family();
+  color: $color-primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 17.5px */
+}
+
+@mixin typography-label-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 17.5px */
+}
+
+@mixin typography-label-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 125%; /* 15px */
+}
+
+@mixin typography-btn {
+  @include font-family();
+  color: $color-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+
+@mixin typography-btn-tab {
+  @include font-family();
+  color: $color-primary;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 19.2px */
+}
+
+@mixin typography-btn-sm {
+  @include font-family();
+  color: $color-primary;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%; /* 16.8px */
+}
