@@ -97,16 +97,12 @@ button {
 }
 
 .container {
-  max-width: $container-max-desk;
-  padding: 0 $container-px-desk;
+  max-width: 1620px;
+  padding: 0 100px;
   margin: 0 auto;
 
-  @media (max-width: $media-tablet) {
-    padding: 0 $container-px-tab;
-  }
-
-  @media (max-width: $media-smart) {
-    padding: 0 $container-px-smart;
+  @media (max-width: $media-medium) {
+    padding: 0 20px;
   }
 }
 

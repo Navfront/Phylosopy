@@ -1,16 +1,8 @@
-$container-px-desk: 36px;
-$container-px-tab: 72px;
-$container-px-smart: 12px;
-
-$container-max-desk: calc(1280px + $container-px-desk + $container-px-desk);
-
-$grid-gap-desktop: 32px;
-$grid-gap-smart: 16px;
-
-$media-desktop: 1200px;
-$media-tablet: 991px;
-$media-medium: 700px;
-$media-smart: 552px;
+$media-desktop: 1550px;
+$media-desk-low: 1280px;
+$media-tablet: 1024px;
+$media-medium: 800px;
+$media-smart: 695px;
 
 $color-primary: #2a2a30;
 $color-secondary: #8c94a8;
@@ -27,6 +19,8 @@ $color-brand-blue-dark: #004889;
 
 $color-white: #fff;
 $color-black: #000;
+
+$color-backdrop: rgba(89, 93, 103, 0.75);
 
 $bg-gradient: linear-gradient(180deg, #14b58a 0%, #009cd7 100%);
 $bg-gradient2: linear-gradient(164deg, #14b58a 0%, #009cd7 100%);

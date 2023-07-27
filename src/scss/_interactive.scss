@@ -1,0 +1,66 @@
+.interactive-before {
+  &::before {
+    transform-origin: center;
+    transition: 0.15s ease-in transform;
+  }
+
+  &:focus-visible,
+  &:hover,
+  &:active {
+    &::before {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }
+}
+
+.interactive-underline {
+  position: relative;
+  transition: 0.2s ease-in opacity;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid currentColor;
+    transform-origin: left;
+    transition: 0.2s ease-in transform;
+    transform: scale(0);
+  }
+
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    &::after {
+      transform: scale(1);
+    }
+
+    &:active {
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.interactive-opacity {
+  transition: 0.2s ease-in opacity;
+
+  &:active {
+    opacity: 0.2;
+    &::after,
+    &::before {
+      opacity: 0.2;
+    }
+  }
+}
+
+.interactive-color {
+  transition: 0.2s ease-in color;
+
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    color: $color-brand-green;
+  }
+}
