@@ -1,0 +1,123 @@
+.menu {
+  &__inner {
+    @media (max-width: $media-desk-low) {
+      border-radius: 20px 20px 0px 0px;
+      padding: 30px;
+      margin: 0 auto;
+      display: none;
+      grid-template-columns: minmax(auto, 150px) auto;
+      gap: 30px 20px;
+      width: 100%;
+      max-width: 800px;
+      background-color: $color-white;
+      transition: 0.15s ease-in transform;
+      transform: translateY(300%);
+    }
+
+    @media (max-width: $media-smart) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media (max-width: $media-desk-low) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    margin: 15px;
+
+    @media (max-width: $media-desk-low) {
+      margin: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__navigation-list {
+    display: none;
+
+    @media (max-width: $media-desk-low) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+  }
+
+  &__socials {
+    grid-column: 1 / -1;
+    margin: 0 auto;
+    display: none;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 414px;
+    color: $color-accent;
+
+    @media (max-width: $media-desk-low) {
+      display: grid;
+    }
+  }
+
+  @media (max-width: $media-desk-low) {
+    padding: 30px 30px 0 30px;
+  }
+
+  &--active &__inner {
+    @media (max-width: $media-desk-low) {
+      transform: translateY(0);
+      display: grid;
+    }
+  }
+
+  &--footer {
+    padding: 0;
+  }
+
+  &--footer &__navigation-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: $media-smart) {
+      display: block;
+    }
+  }
+
+  &--footer &__inner {
+    padding: 0;
+    padding-right: 100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(auto, 150px) auto;
+    gap: 30px 15px;
+    width: 100%;
+    background-color: transparent;
+    transition: none;
+    transform: none;
+
+    @media (max-width: $media-desk-low) {
+      padding-right: 0;
+    }
+
+    @media (max-width: $media-smart) {
+      display: block;
+    }
+  }
+
+  &--footer &__item {
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  &--footer &__navigation-list {
+    gap: 0 30px;
+  }
+}

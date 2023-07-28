@@ -1,0 +1,241 @@
+.page {
+  &__footer {
+  }
+}
+
+.footer {
+  border-top-left-radius: $b-radius;
+  border-top-right-radius: $b-radius;
+  padding-top: 60px;
+  padding-bottom: 80px;
+  background: $bg-gradient;
+  color: $color-white;
+
+  @media (max-width: $media-medium) {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: grid;
+    grid-template-columns: minmax(auto, 17%) 1fr;
+    gap: 0 5%;
+
+    @media (max-width: $media-desk-low) {
+      padding-top: 100px;
+    }
+    @media (max-width: $media-smart) {
+      padding-top: 15px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__up-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    transition: 0.2s ease-in transform, 0.2s ease-in opacity;
+  }
+
+  &__contact-phone {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 30px;
+    width: max-content;
+    white-space: nowrap;
+
+    @media (max-width: $media-medium) {
+      order: -5;
+    }
+  }
+
+  &__addr {
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 30px;
+
+    @media (max-width: $media-smart) {
+      order: -3;
+    }
+  }
+
+  &__addr-list {
+    display: flex;
+    flex-direction: column;
+
+    @media (max-width: $media-smart) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+
+  &__addr-wrap {
+    dt {
+      margin-bottom: 8px;
+    }
+    dd {
+      margin: 0;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__menu {
+    grid-column: 2 / -1;
+    grid-row: 1 / 4;
+    margin-bottom: 30px;
+
+    @media (max-width: $media-smart) {
+      order: -4;
+    }
+  }
+
+  &__socials-wrap {
+    grid-column: 1 / -1;
+
+    @media (max-width: $media-smart) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__mid {
+    grid-column: 1 / -1;
+  }
+
+  &__bottom {
+    grid-column: 1 / -1;
+  }
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (max-width: $media-smart) {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    max-width: 360px;
+    width: 100%;
+  }
+
+  &__item {
+    margin-bottom: 10px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__link {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-accent;
+    background-color: $color-white;
+  }
+}
+
+.footer-mid {
+  position: relative;
+  margin-bottom: 110px;
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 340px) 1fr;
+  align-items: end;
+  gap: 20px;
+
+  @media (max-width: $media-smart) {
+    order: -2;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    grid-row: 1;
+    grid-column: 2;
+
+    @media (max-width: $media-medium) {
+      width: 277px;
+      height: 100px;
+    }
+  }
+
+  &__copy::before,
+  &__created::before {
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    display: block;
+    border-top: 1px solid $color-white;
+    width: 100%;
+  }
+
+  &__copy,
+  &__created {
+    top: 10px;
+    padding-top: 15px;
+    display: inline-block;
+    height: 30px;
+  }
+
+  &__copy {
+    position: relative;
+    grid-row: 1;
+    grid-column: 1;
+
+    @media (max-width: $media-smart) {
+      display: none;
+    }
+  }
+
+  &__created {
+    position: relative;
+    grid-row: 1;
+    grid-column: 3;
+    display: flex;
+    white-space: nowrap;
+    justify-content: flex-end;
+    align-items: center;
+
+    @media (max-width: $media-smart) {
+      display: none;
+    }
+  }
+
+  &__samolet {
+    margin-left: 10px;
+    display: inline-block;
+  }
+}
+
+.footer-bottom {
+  &__links {
+    display: flex;
+  }
+
+  &__info {
+    margin-bottom: 30px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 5%;
+  }
+}

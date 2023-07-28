@@ -64,3 +64,13 @@
     color: $color-brand-green;
   }
 }
+
+.interactive-scale {
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    transform: scale(1.05);
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}

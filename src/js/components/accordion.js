@@ -1,4 +1,5 @@
 let acc = null
+let footerAcc = null
 
 function checkResolution () {
   const screenWidth = window.innerWidth
@@ -6,11 +7,16 @@ function checkResolution () {
     if (!acc) {
       acc = new Accordion('.js-nav-accordion')
       acc.closeAll()
+
+      footerAcc = new Accordion('.js-footer-accordion')
+      footerAcc.closeAll()
     }
   } else {
     if (acc) {
       acc.destroy()
       acc = null
+      footerAcc.destroy()
+      footerAcc = null
     }
   }
 }

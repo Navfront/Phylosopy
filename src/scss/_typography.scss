@@ -272,3 +272,19 @@
     @include header-link-tab();
   }
 }
+
+.text-regular {
+  @include typography-regular-tab();
+
+  @media (max-width: $media-medium) {
+    @include typography-regular-sm();
+  }
+}
+
+.text-opacity-75 {
+  opacity: 0.75;
+}
+
+.text-opacity-50 {
+  opacity: 0.5;
+}

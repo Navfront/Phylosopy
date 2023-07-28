@@ -1,0 +1,51 @@
+.navigation-list {
+  @media (max-width: $media-smart) {
+    display: block;
+  }
+
+  &__item {
+    display: contents;
+
+    @media (max-width: $media-smart) {
+      display: block;
+      padding-bottom: 10px;
+      border-bottom: 1px solid $color-grey;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__caption {
+    @include header-link-tab();
+    order: -5;
+
+    @media (max-width: $media-smart) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__sublist {
+    display: grid;
+    grid-template-rows: subgrid;
+
+    @media (max-width: $media-smart) {
+      display: block;
+    }
+  }
+
+  &__sublist-item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+
+  & &__trigger {
+    display: none;
+    @media (max-width: $media-smart) {
+      display: flex;
+    }
+  }
+}
