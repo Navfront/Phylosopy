@@ -23,8 +23,9 @@
     gap: 0 5%;
 
     @media (max-width: $media-desk-low) {
-      padding-top: 100px;
+      padding-top: 75px;
     }
+
     @media (max-width: $media-smart) {
       padding-top: 15px;
       display: flex;

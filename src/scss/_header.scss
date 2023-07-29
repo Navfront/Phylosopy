@@ -62,8 +62,8 @@
 
 .logo {
   @media (max-width: $media-smart) {
-    height: 30px;
-    width: 80px;
+    min-width: 80px;
+    width: 30%;
   }
 
   transition: 0.15s ease-in opacity;
