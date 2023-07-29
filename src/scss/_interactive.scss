@@ -48,10 +48,10 @@
   transition: 0.2s ease-in opacity;
 
   &:active {
-    opacity: 0.2;
+    opacity: 0.5;
     &::after,
     &::before {
-      opacity: 0.2;
+      opacity: 0.5;
     }
   }
 }

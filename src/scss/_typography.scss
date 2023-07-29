@@ -288,3 +288,23 @@
 .text-opacity-50 {
   opacity: 0.5;
 }
+
+.main-heading {
+  @include typography-h1();
+
+  @media (max-width: $media-medium) {
+    @include typography-h1-tab();
+  }
+
+  @media (max-width: $media-smart) {
+    @include typography-h1-sm();
+  }
+}
+
+.main-subheading {
+  @include typography-title();
+
+  @media (max-width: $media-smart) {
+    @include typography-title-sm();
+  }
+}

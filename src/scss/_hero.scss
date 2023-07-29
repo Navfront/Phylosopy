@@ -1,0 +1,105 @@
+.hero {
+  position: relative;
+  padding: 50px 0 70px;
+  min-height: 600px;
+  color: $color-white;
+
+  @media (max-width: $media-medium) {
+    padding: 0;
+    min-height: 435px;
+    color: $color-primary;
+  }
+
+  @media (max-width: $media-smart) {
+    min-height: 248px;
+  }
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 50px;
+    display: grid;
+    max-width: 730px;
+
+    @media (max-width: $media-tablet) {
+      max-width: 600px;
+    }
+
+    @media (max-width: $media-medium) {
+      margin-bottom: 0;
+      padding: 30px 0;
+      max-width: 565px;
+    }
+
+    @media (max-width: $media-smart) {
+      max-width: 440px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-top: 20px;
+    display: block;
+    text-transform: none;
+  }
+
+  &__descr {
+    @media (max-width: $media-medium) {
+      color: $color-secondary;
+    }
+  }
+
+  &__pickup {
+    position: relative;
+    z-index: 1;
+
+    @media (max-width: $media-medium) {
+      display: none;
+    }
+  }
+
+  &__slider {
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    @media (max-width: $media-medium) {
+      position: relative;
+    }
+  }
+
+  &__slider-pagination {
+    & .swiper-pagination-bullet {
+      background-color: $color-light;
+      width: 16px;
+      height: 16px;
+      opacity: 0.5;
+      outline: 2px solid transparent;
+      outline-offset: 2px;
+      transition: 0.15s ease-in outline-color;
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+
+      &:focus-visible:not(:active),
+      &:hover:not(:focus):not(:active) {
+        outline-color: $color-accent;
+      }
+
+      @media (max-width: $media-medium) {
+        border-radius: 0;
+        transform: rotate(45deg);
+      }
+    }
+
+    & .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+  }
+}

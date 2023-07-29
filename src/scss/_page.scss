@@ -1,4 +1,8 @@
 .page {
+  &__body {
+    background-color: $color-light;
+  }
+
   &__backdrop {
     position: relative;
 

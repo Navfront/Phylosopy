@@ -4,6 +4,7 @@
 @import "_typography.scss";
 @import "_common.scss";
 @import "_accordion.scss";
+@import "_swiper.scss";
 @import "_page.scss";
 
 // Header
@@ -13,6 +14,9 @@
 @import "_navigation-list.scss";
 
 // Main
+@import "_hero.scss";
+@import "_section.scss";
+@import "_pickup-btn.scss";
 
 // Footer
 @import "_footer.scss";
