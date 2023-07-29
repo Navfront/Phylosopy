@@ -30,9 +30,17 @@ if (burger && menu) {
   })
 
   backdrop.addEventListener('click', closeMenu)
+
+  menu.addEventListener('click', evt => {
+    evt.stopPropagation()
+    if (evt.target === menu) closeMenu()
+  })
+
   window.addEventListener('keydown', evt => {
     if (evt.key === 'Escape') {
       closeMenu()
     }
   })
 }
+
+window.addEventListener('resize', closeMenu)

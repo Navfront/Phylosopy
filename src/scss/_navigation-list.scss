@@ -63,7 +63,6 @@
 
   &__sublist {
     display: contents;
-    grid-template-rows: subgrid;
 
     @media (max-width: $media-smart) {
       display: block;
