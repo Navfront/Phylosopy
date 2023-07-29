@@ -74,3 +74,13 @@
     opacity: 0.7;
   }
 }
+
+.interactive-bounce {
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    animation-name: bounce;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}

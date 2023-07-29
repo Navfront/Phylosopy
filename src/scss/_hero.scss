@@ -28,7 +28,7 @@
     }
 
     @media (max-width: $media-medium) {
-      margin-bottom: 0;
+      margin: 0;
       padding: 30px 0;
       max-width: 565px;
     }
@@ -53,6 +53,24 @@
     @media (max-width: $media-medium) {
       color: $color-secondary;
     }
+
+    @media (max-width: $media-smart) {
+      padding-right: 70px;
+    }
+  }
+
+  &__consolut-btn-wrap {
+    position: relative;
+    top: -70px;
+    margin-bottom: -50px;
+    display: grid;
+    justify-content: end;
+  }
+
+  &__consult-btn {
+    z-index: 99;
+    right: 20px;
+    bottom: 20px;
   }
 
   &__pickup {
