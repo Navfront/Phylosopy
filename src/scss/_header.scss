@@ -1,6 +1,6 @@
 .header {
   position: relative;
-  z-index: 1;
+  z-index: 3;
   padding: 23px 0;
   color: $color-white;
   background: $bg-gradient2;
@@ -24,7 +24,7 @@
     margin-right: 8%;
     @media (max-width: $media-desk-low) {
       position: fixed;
-      z-index: 2;
+      z-index: 99;
       left: 0;
       bottom: 0;
       width: 100%;
