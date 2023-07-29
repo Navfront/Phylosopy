@@ -62,8 +62,8 @@
 
   &--active &__inner {
     @media (max-width: $media-desk-low) {
-      transform: translateY(0);
       display: grid;
+      transform: translateY(0);
     }
   }
 
@@ -72,6 +72,8 @@
   }
 
   &--footer &__inner {
+    position: relative;
+    z-index: 99;
     padding: 0;
     padding-right: 100px;
     margin: 0 auto;
