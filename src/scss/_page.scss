@@ -18,11 +18,12 @@
       background-color: hsla(223, 7%, 38%, 0.75);
       opacity: 0;
       transition: 0.15s ease-in opacity;
+      pointer-events: none;
     }
 
     &--active::after {
       z-index: 2;
-
+      pointer-events: all;
       opacity: 1;
     }
   }
