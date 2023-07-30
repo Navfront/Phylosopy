@@ -1,4 +1,6 @@
 .footer {
+  position: relative;
+  z-index: 2;
   border-top-left-radius: $b-radius;
   border-top-right-radius: $b-radius;
   padding-top: 60px;

@@ -308,3 +308,43 @@
     @include typography-title-sm();
   }
 }
+
+.text-h2 {
+  @include typography-h2();
+
+  @media (max-width: $media-tablet) {
+    @include typography-h2-tab();
+  }
+
+  @media (max-width: $media-smart) {
+    @include typography-h2-sm();
+  }
+}
+
+.text-subtitle {
+  @include typography-title();
+
+  @media (max-width: $media-tablet) {
+    @include typography-title-tab();
+  }
+
+  @media (max-width: $media-smart) {
+    @include typography-title-sm();
+  }
+}
+
+.text-big {
+  @include typography-h1();
+
+  @media (max-width: $media-tablet) {
+    @include typography-h1-tab();
+  }
+}
+
+.text-small {
+  @include typography-medium();
+
+  @media (max-width: $media-smart) {
+    @include typography-medium-sm();
+  }
+}

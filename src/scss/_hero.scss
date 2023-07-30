@@ -2,7 +2,7 @@
   position: relative;
   z-index: 2;
   padding: 50px 0 70px;
-  min-height: 600px;
+  min-height: 970px;
   color: $color-white;
 
   @media (max-width: $media-medium) {
@@ -65,6 +65,10 @@
     margin-bottom: -50px;
     display: grid;
     justify-content: end;
+
+    @media (max-width: $media-medium) {
+      margin-bottom: -40px;
+    }
   }
 
   &__consult-btn {
@@ -94,7 +98,10 @@
     }
   }
 
-  &__slider-pagination {
+  &__slider-pagination.swiper-pagination {
+    top: unset;
+    bottom: 5%;
+
     & .swiper-pagination-bullet {
       background-color: $color-light;
       width: 16px;

@@ -1,5 +1,7 @@
 .section {
   & + & {
-    margin-top: -20px;
+    z-index: 2;
+    position: relative;
+    margin-top: -30px;
   }
 }
