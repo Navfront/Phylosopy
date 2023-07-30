@@ -6,6 +6,15 @@
   background-color: $color-light;
   color: $color-accent;
 
+  &--rounded {
+    border: 1px solid;
+    border-radius: $b-rad-sm;
+    padding: 12px 20px;
+    min-height: unset;
+    width: unset;
+    background-color: transparent;
+  }
+
   &__title {
     @include typography-title-sm();
     margin-bottom: 60px;

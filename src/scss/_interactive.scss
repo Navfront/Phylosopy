@@ -66,9 +66,23 @@
 }
 
 .interactive-scale {
+  transition: 0.15s ease-in transform, 0.15s ease-in opacity;
+
   &:focus-visible:not(:active),
   &:hover:not(:focus):not(:active) {
     transform: scale(1.05);
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.interactive-color-dark {
+  transition: 0.15s ease-in color, 0.15s ease-in opacity;
+
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    color: $color-brand-blue-dark;
   }
   &:active {
     opacity: 0.7;

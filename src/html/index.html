@@ -110,6 +110,110 @@ styles: "css/style.index.min.css"
           </dl>
         </div>
       </section>
+
+      <section class="collection section">
+        <div class="container">
+          <h2 class="section__title collection__title text-h2">
+            Коллекция квартир
+          </h2>
+          <form class="collection__form collection-form form" action="#" method="post">
+            <div class="collection__fieldset form__fieldset">
+              <label class="collection-form__label form__label">
+                <span class="collection-form__label-text form__label-text">Выберите дом</span>
+                <select class="form__select js-collection-select" name="project">
+                  <option class="form__select-option" value="">Показать все</option>
+                  <option class="form__select-option" value="zagvozdkina">Екатеринбург,
+                    дом на Жуковского
+                  </option>
+                  <option class="form__select-option" value="zhukovskogo">Екатеринбург,
+                    ЖК на Черкасской</option>
+                  <option class="form__select-option" value="pervomai">Березовский,
+                    дом на Загвоздкина</option>
+                  <option class="form__select-option" value="cherkas">Березовский, ЖК «Первомайский»
+                  </option>
+                </select>
+              </label>
+            </div>
+            <div class="collection__fieldset form__fieldset collection-form__rooms">
+              <span class="collection__legend form__legend">Укажите количество комнат</span>
+              <label class="collection-form__label form__label">
+                <span>Ст</span>
+                <input class="collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+              <label class="collection-form__label form__label">
+                <span>1</span>
+                <input class=" collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+              <label class="collection-form__label form__label">
+                <span>2</span>
+                <input class=" collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+              <label class="collection-form__label form__label">
+                <span>3</span>
+                <input class=" collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+              <label class="collection-form__label form__label">
+                <span>4+</span>
+                <input class="collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+            </div>
+            <div class="collection__fieldset form__fieldset">
+              <span class="collection-form__legend form__legend">Задайте площадь м2</span>
+              <div class="form__slider slider js-square-slider">
+                <label class="form__label-from slider__from">
+                  <span class="form__slider-descr slider__descr">от</span>
+                  <input class="form__slider-input slider__input js-slider-from" name="price-from"
+                    type="text" min="0" max="99999" step=" 1" value="34,78" />
+                  <span class="form__slider-descr slider__descr">м<sup>2</sup></span>
+                </label>
+                <label class="slider__to form__label-to">
+                  <span class="form__slider-descr slider__descr">до</span>
+                  <input class="form__slider-input slider__input js-slider-to" name="price-from"
+                    type="text" min="0" max="99999" step="1" value="78,14" />
+                  <span class="form__slider-descr slider__descr">м<sup>2</sup></span>
+                </label>
+                <div class="form__inner-slider slider__slider js-slider"></div>
+              </div>
+            </div>
+
+            <div class="collection__fieldset form__fieldset">
+              <span class="collection-form__legend form__legend">Укажите этаж</span>
+              <div class="form__slider slider js-level-slider">
+                <label class="form__label-from slider__from">
+                  <input class="form__slider-input slider__input js-slider-from" name="price-from"
+                    type="number" min="1" max="17" step="1" value="1" />
+                </label>
+                <label class="slider__to form__label-to">
+                  <input class="form__slider-input slider__input js-slider-to" name="price-from"
+                    type="number" min="1" max="17" step="1" value="17" />
+                </label>
+                <div class="form__inner-slider slider__slider js-slider"></div>
+              </div>
+            </div>
+            <button
+              class="collection-form__submit pickup pickup--rounded interactive-before interactive-opacity"
+              type="submit">
+              <div class="pickup__link">
+                <svg class="pickup__icon" width="77" height="43">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="img/sprite.svg#icon-arrowrect">
+                  </use>
+                </svg>
+                Показать ... квартир
+              </div>
+            </button>
+            <!-- <p class="collection-form__message">Найдено 2 456 планировок</p>
+            <button class="collection-form__clear-btn js-filter-clear interactive-color-dark"
+              type="button">Очистить фильтр
+              <svg class="collection-form__clear-btn-icon" width="24" height="24">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="img/sprite.svg#icon-close">
+                </use>
+              </svg>
+            </button> -->
+          </form>
+        </div>
+      </section>
     </main>
     @@include("./_footer.html", {
     logourl: "#"
@@ -117,7 +221,10 @@ styles: "css/style.index.min.css"
   </div>
   <script src="js/accordion.min.js"></script>
   <script src="js/swiper.min.js"></script>
+  <script src="js/choices.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
   <script src="js/bundle.min.js"></script>
+
 </body>
 
 </html>
