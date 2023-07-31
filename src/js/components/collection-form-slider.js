@@ -20,7 +20,6 @@
   const slider = squareSliderContainer.querySelector('.js-slider')
   const inputPriceFrom = squareSliderContainer.querySelector('.js-slider-from')
   const inputPriceTo = squareSliderContainer.querySelector('.js-slider-to')
-  console.log(squareSliderContainer, slider, inputPriceFrom, inputPriceTo)
   if (slider) {
     const noUi = noUiSlider.create(slider, {
       start: [3478, 7814],
@@ -108,7 +107,6 @@
   const slider = squareSliderContainer.querySelector('.js-slider')
   const inputPriceFrom = squareSliderContainer.querySelector('.js-slider-from')
   const inputPriceTo = squareSliderContainer.querySelector('.js-slider-to')
-  console.log(squareSliderContainer, slider, inputPriceFrom, inputPriceTo)
   if (slider) {
     const noUi = noUiSlider.create(slider, {
       start: [1, 17],

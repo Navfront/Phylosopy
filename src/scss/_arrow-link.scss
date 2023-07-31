@@ -1,0 +1,67 @@
+@mixin abstract-arrow-link {
+  display: flex;
+  align-items: center;
+
+  .arrow-link__icons {
+    position: relative;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 77px;
+    color: inherit;
+
+    &::before {
+      position: absolute;
+      order: -1;
+      content: "";
+      border: 1px solid currentColor;
+      display: block;
+      width: 30px;
+      height: 30px;
+      transform: translateX(40px) rotate(45deg);
+      transform-origin: center;
+      transition: 0.15s ease-in transform;
+      color: inherit;
+    }
+  }
+
+  .arrow-link__svg {
+    position: absolute;
+    order: -2;
+    margin-right: 20px;
+    transition: 0.15s ease-in transform;
+  }
+
+  &:focus-visible svg,
+  &:hover svg {
+    transform: translateX(5px);
+  }
+
+  &:focus-visible .arrow-link__icons,
+  &:hover .arrow-link__icons,
+  &:active .arrow-link__icons {
+    &::before {
+      transform: translateX(45px) rotate(0deg);
+    }
+  }
+}
+
+.arrow-link {
+  @include abstract-arrow-link();
+  color: $color-accent;
+}
+
+.arrow-link--rounded {
+  border: 1px solid currentColor;
+  border-radius: $b-rad-sm;
+  padding: 25px 20px;
+  min-height: unset;
+  width: unset;
+  background-color: transparent;
+  color: currentColor;
+}
+
+.arrow-link--light {
+  color: $color-white;
+}

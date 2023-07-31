@@ -6,16 +6,6 @@
   background-color: $color-light;
   color: $color-accent;
 
-  &--rounded {
-    border: 1px solid currentColor;
-    border-radius: $b-rad-sm;
-    padding: 12px 20px;
-    min-height: unset;
-    width: unset;
-    background-color: transparent;
-    color: currentColor;
-  }
-
   &__title {
     @include typography-title-sm();
     margin-bottom: 60px;
@@ -25,35 +15,6 @@
     background-size: 60px 60px;
     background-image: url("../img/decor/house.svg");
     min-height: 60px;
-  }
-
-  &__link {
-    position: relative;
-    display: flex;
-    align-items: center;
-
-    &::before {
-      position: absolute;
-      left: 55px;
-      top: 50%;
-      content: "";
-      border: 1px solid currentColor;
-      display: block;
-      width: 30px;
-      height: 30px;
-      transform: translate(-50%, -50%) rotate(45deg);
-      transform-origin: center;
-    }
-
-    &:focus-visible:not(:active) svg,
-    &:hover:not(:focus):not(:active) svg {
-      transform: translateX(5px);
-    }
-  }
-
-  &__icon {
-    margin-right: 20px;
-    transition: 0.15s ease-in transform;
   }
 }
 
