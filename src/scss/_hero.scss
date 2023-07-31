@@ -80,6 +80,7 @@
   &__pickup {
     position: relative;
     z-index: 1;
+    color: $color-accent;
 
     @media (max-width: $media-medium) {
       display: none;

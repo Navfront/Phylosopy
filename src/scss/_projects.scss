@@ -1,0 +1,39 @@
+.projects {
+  padding: 100px 0 120px;
+  background-color: $color-white;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 20px;
+
+    @media (max-width: $media-smart) {
+      grid-template-columns: 1fr;
+      grid-template-rows: max-content;
+      grid-auto-rows: minmax(500px, auto);
+    }
+  }
+
+  &__title {
+    justify-self: center;
+    grid-column: 1 / -1;
+    margin-bottom: 17px;
+
+    @media (max-width: $media-smart) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__list {
+    display: contents;
+  }
+
+  &__helper {
+    grid-row: 3;
+    grid-column: 1 / -1;
+
+    @media (max-width: $media-smart) {
+      grid-row: 4;
+    }
+  }
+}

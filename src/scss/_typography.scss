@@ -348,3 +348,14 @@
     @include typography-medium-sm();
   }
 }
+
+.text-title-h3 {
+  @include typography-h3();
+
+  @media (max-width: $media-smart) {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+}

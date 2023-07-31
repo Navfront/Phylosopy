@@ -27,6 +27,11 @@ $color-backdrop: hsla(223, 7%, 38%, 0.75);
 
 $bg-gradient: linear-gradient(180deg, #14b58a 0%, #009cd7 100%);
 $bg-gradient2: linear-gradient(164deg, #14b58a 0%, #009cd7 100%);
+$bg-gradient-op: linear-gradient(
+  180deg,
+  rgba(20, 181, 138, 0.75) 0%,
+  rgba(0, 156, 215, 0.75) 100%
+);
 
 $b-radius: 20px;
 $b-rad-sm: 8px;
