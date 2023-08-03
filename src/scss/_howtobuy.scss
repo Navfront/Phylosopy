@@ -1,0 +1,251 @@
+.howtobuy {
+  position: relative;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  background-color: $color-light;
+  color: $color-primary;
+
+  @media (max-width: $media-desk-low) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: $media-smart) {
+    padding: 40px 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    width: 100%;
+
+    &::after {
+      z-index: -1;
+      content: "";
+      display: block;
+      position: absolute;
+      left: calc(300px + 45%);
+      top: -155px;
+      height: calc(100% + 240px);
+      width: calc(66% + 300px);
+      background-image: url("../img/howtobuy/bg.png");
+      background-repeat: no-repeat;
+      background-position: right bottom;
+      background-size: contain;
+      transform: translateX(-50%);
+
+      @media (max-width: $media-desk-low) {
+        left: calc(239px + 45%);
+        top: -155px;
+        height: calc(100% + 240px);
+        width: calc(41% + 300px);
+      }
+
+      @media (max-width: $media-tablet) {
+        left: calc(239px + 50%);
+      }
+
+      @media (max-width: $media-smart) {
+        position: relative;
+        margin: 0 auto;
+        left: 50%;
+        top: 10px;
+        width: calc(100% - 40px);
+        height: 220px;
+        background-position: center bottom;
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    max-width: 55%;
+
+    @media (max-width: $media-desk-low) {
+      max-width: none;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 40px;
+    max-width: 519px;
+    color: $color-secondary;
+
+    @media (max-width: $media-desk-low) {
+      max-width: 44%;
+    }
+
+    @media (max-width: $media-tablet) {
+      max-width: 50%;
+    }
+
+    @media (max-width: $media-smart) {
+      max-width: none;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    margin-bottom: 113px;
+    max-width: 305px;
+    color: $color-accent;
+
+    @media (max-width: $media-smart) {
+      margin-bottom: 30px;
+      max-width: none;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+
+  &__slider-container {
+    @media (max-width: $media-desk-low) {
+      display: contents;
+    }
+
+    @media (max-width: $media-smart) {
+      display: block;
+      margin: 0;
+    }
+  }
+
+  &__slider {
+    width: 100%;
+  }
+
+  &__slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 100%;
+
+    @media (max-width: $media-desk-low) {
+      display: flex;
+      grid-template-columns: none;
+      gap: unset;
+    }
+
+    @media (max-width: $media-smart) {
+      display: grid;
+      gap: 20px;
+    }
+  }
+
+  &__card {
+    border-radius: $b-radius;
+    padding: 35px 20px 35px 30px;
+    display: grid;
+    grid-template-columns: 80px 1fr;
+    gap: 12px 20px;
+    background-color: $color-white;
+
+    @media (max-width: $media-desk-low) {
+      &.swiper-slide {
+        width: auto !important;
+      }
+      margin: 0 10px;
+
+      &:first-child {
+        margin-left: 20px;
+      }
+      &:last-child {
+        margin-right: 20px;
+      }
+    }
+
+    @media (max-width: $media-smart) {
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      gap: 10px;
+      margin: 0;
+      width: 100%;
+
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:last-child {
+        margin-right: 0px;
+      }
+    }
+
+    &::before {
+      grid-row: 1 / 3;
+      align-self: center;
+      content: "";
+      display: block;
+      height: 80px;
+      width: auto;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+
+      @media (max-width: $media-smart) {
+      }
+    }
+
+    &--home {
+      &::before {
+        background-image: url("../img/decor/home.svg");
+      }
+    }
+
+    &--calendar {
+      &::before {
+        background-image: url("../img/decor/calendar.svg");
+      }
+    }
+
+    &--contract {
+      &::before {
+        background-image: url("../img/decor/contract.svg");
+      }
+    }
+
+    &--clock {
+      &::before {
+        background-image: url("../img/decor/clock.svg");
+      }
+    }
+  }
+
+  &__dt {
+    grid-column: 2;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    white-space: nowrap;
+  }
+
+  &__dd {
+    grid-column: 2;
+    margin-left: 0;
+    max-width: 131px;
+    color: $color-secondary;
+  }
+
+  &__slider-controls {
+    display: none;
+    position: relative;
+    justify-content: space-between;
+
+    @media (max-width: $media-desk-low) {
+      display: flex;
+    }
+
+    @media (max-width: $media-smart) {
+      display: none;
+    }
+  }
+}
+
+.arrow-link {
+  &--rounded {
+  }
+
+  &__icons {
+  }
+
+  &__svg {
+  }
+}
