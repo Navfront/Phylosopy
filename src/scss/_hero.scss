@@ -60,14 +60,14 @@
   }
 
   &__consolut-btn-wrap {
-    position: relative;
-    top: -70px;
-    margin-bottom: -50px;
+    position: absolute;
+    right: 0px;
+    bottom: 60px;
     display: grid;
     justify-content: end;
 
     @media (max-width: $media-medium) {
-      margin-bottom: -40px;
+      bottom: 80px;
     }
   }
 
