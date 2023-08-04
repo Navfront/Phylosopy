@@ -373,7 +373,7 @@ styles: "css/style.index.min.css"
           </a>
         </div>
         <div class="container howtobuy__slider-container">
-          <div class=" howtobuy__slider js-howtobuy-slider">
+          <div class="howtobuy__slider js-howtobuy-slider">
             <dl class="howtobuy__slider-wrapper list-reset">
               <div class="howtobuy__card howtobuy__card--home">
                 <dt class="howtobuy__dt">от 3,9%</dt>
@@ -393,12 +393,17 @@ styles: "css/style.index.min.css"
               </div>
             </dl>
           </div>
+        </div>
+        <div class="container">
           <div class="howtobuy__slider-controls">
-            <button class="swiper-button-next" type="button"></button>
-            <button class="swiper-button-prev" type="button"></button>
+            <button class="swiper-button-prev howtobuy__slider-prev" type="button">
+              <span class="visually-hidden">предыдущий слайд</span>
+            </button>
+            <button class="swiper-button-next howtobuy__slider-next" type="button">
+              <span class="visually-hidden">следующий слайд</span>
+            </button>
           </div>
         </div>
-
       </section>
     </main>
     @@include("./_footer.html", {

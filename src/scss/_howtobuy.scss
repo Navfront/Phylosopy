@@ -23,9 +23,9 @@
       content: "";
       display: block;
       position: absolute;
-      left: calc(300px + 45%);
-      top: -155px;
-      height: calc(100% + 240px);
+      left: calc(300px + 50%);
+      top: -150px;
+      height: calc(100% + 460px);
       width: calc(66% + 300px);
       background-image: url("../img/howtobuy/bg.png");
       background-repeat: no-repeat;
@@ -41,7 +41,11 @@
       }
 
       @media (max-width: $media-tablet) {
-        left: calc(239px + 50%);
+        left: calc(200px + 50%);
+      }
+
+      @media (max-width: $media-medium) {
+        left: calc(167px + 50%);
       }
 
       @media (max-width: $media-smart) {
@@ -89,6 +93,10 @@
     max-width: 305px;
     color: $color-accent;
 
+    @media (max-width: $media-medium) {
+      margin-bottom: 58px;
+    }
+
     @media (max-width: $media-smart) {
       margin-bottom: 30px;
       max-width: none;
@@ -111,6 +119,7 @@
 
   &__slider {
     width: 100%;
+    margin-bottom: 50px;
   }
 
   &__slider-wrapper {
@@ -225,9 +234,9 @@
   }
 
   &__slider-controls {
-    display: none;
     position: relative;
-    justify-content: space-between;
+    display: none;
+    justify-content: flex-end;
 
     @media (max-width: $media-desk-low) {
       display: flex;
@@ -237,15 +246,35 @@
       display: none;
     }
   }
-}
 
-.arrow-link {
-  &--rounded {
+  &__slider-prev,
+  &__slider-next {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: 1px solid $color-accent;
+    border-radius: 50%;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    transition: 0.15s ease-in border-radius;
+
+    &::after {
+      color: $color-accent;
+      transform: scale(0.4);
+    }
+
+    &:focus-visible,
+    &:hover {
+      border-radius: $b-rad-sm;
+    }
   }
 
-  &__icons {
+  &__slider-prev {
+    margin-right: 30px;
   }
 
-  &__svg {
+  &__slider-next {
   }
 }
