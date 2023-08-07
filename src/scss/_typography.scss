@@ -359,3 +359,19 @@
     line-height: 120%;
   }
 }
+
+.text-title {
+  @include typography-title();
+
+  @media (max-width: $media-smart) {
+    @include typography-title-sm();
+  }
+}
+
+.text-subheading {
+  @include typography-subheading();
+
+  @media (max-width: $media-smart) {
+    @include typography-subheading-sm();
+  }
+}
