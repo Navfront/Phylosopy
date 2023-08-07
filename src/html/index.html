@@ -456,7 +456,22 @@ styles: "css/style.index.min.css"
           </ul>
         </div>
       </section>
-
+      <section class="callback-section section">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <a class="callback-section__phone contact-phone interactive-underline interactive-opacity text-h3"
+          href="tel:+79122888444">
+          <span class="contact-phone__numstart">+7 912</span> 288-84-44
+        </a>
+        <button
+          class="callback-section__call-btn call-btn call-btn--withtext js-call interactive-opacity">
+          <svg class="call-btn__icon" width="32" height="32">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="img/sprite.svg#icon-phonecall">
+            </use>
+          </svg>
+          <span class="call-btn__text">Заказать звонок</span>
+        </button>
+      </section>
     </main>
     @@include("./_footer.html", {
     logourl: "#"

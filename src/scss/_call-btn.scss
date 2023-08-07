@@ -6,10 +6,6 @@
   width: 65px;
   height: 65px;
 
-  @media (max-width: $media-smart) {
-    display: none;
-  }
-
   &::before {
     position: absolute;
     top: 50%;
@@ -27,5 +23,23 @@
   &:focus-visible:not(:active)::before,
   &:hover:not(:focus):not(:active)::before {
     transform: translate(-50%, -50%) rotate(135deg);
+  }
+
+  &--withtext {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 18px;
+    height: auto;
+
+    min-height: 168px;
+    color: $color-accent;
+
+    &::before {
+      top: 34px;
+    }
+  }
+
+  &__text {
+    margin-top: 45px;
   }
 }

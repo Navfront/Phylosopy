@@ -375,3 +375,11 @@
     @include typography-subheading-sm();
   }
 }
+
+.text-h3 {
+  @include typography-h3();
+
+  @media (max-width: $media-smart) {
+    @include typography-h3-sm();
+  }
+}

@@ -38,10 +38,15 @@
 
   &__contact-phone {
     margin-right: 30px;
-    white-space: nowrap;
 
     @media (max-width: $media-smart) {
       margin-right: 15px;
+    }
+  }
+
+  &__call {
+    @media (max-width: $media-smart) {
+      display: none;
     }
   }
 
