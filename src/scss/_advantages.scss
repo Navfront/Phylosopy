@@ -1,0 +1,118 @@
+.advantages {
+  border-radius: $b-radius;
+  padding: 200px 0 245px;
+  background-repeat: no-repeat;
+  background-position: right calc(50% - 630px) top 90px;
+  background-size: 844px 480px;
+  background-image: url("../img/decor/logo-decor.svg");
+  background-color: $color-light;
+
+  @media (max-width: 1900px) {
+    background-position: right -150px top 90px;
+  }
+
+  @media (max-width: $media-tablet) {
+    padding: 100px 0 120px;
+    background-size: 428px 243px;
+    background-position: right -30px top 90px;
+  }
+
+  @media (max-width: $media-medium) {
+    padding: 40px 0 60px;
+  }
+
+  @media (max-width: $media-smart) {
+    padding: 20px 0 40px;
+    background-image: none;
+  }
+
+  &__top {
+    max-width: 520px;
+
+    @media (max-width: $media-medium) {
+      max-width: 540px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 40px;
+
+    @media (max-width: $media-tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 20px;
+  }
+
+  &__descr {
+    margin-bottom: 6px;
+    color: $color-secondary;
+
+    @media (max-width: $media-tablet) {
+      margin-bottom: 50px;
+    }
+
+    @media (max-width: $media-smart) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+
+    @media (max-width: 991px) {
+      grid-template-columns: 1fr;
+      justify-items: center;
+    }
+
+    @media (max-width: $media-smart) {
+      justify-items: stretch;
+    }
+  }
+
+  &__card {
+    border-radius: $b-radius;
+    padding: 20px 35px;
+    display: flex;
+    min-height: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white;
+
+    @media (max-width: $media-tablet) {
+      padding: 20px 26px;
+      min-height: 153px;
+      min-width: 250px;
+    }
+
+    @media (max-width: 991px) {
+      min-width: 354px;
+    }
+  }
+
+  &__dl {
+  }
+
+  &__dt {
+    margin-bottom: 20px;
+    color: $color-accent;
+    white-space: nowrap;
+  }
+
+  &__dd {
+    margin: 0;
+    color: $color-secondary;
+  }
+
+  &__units {
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+  }
+}

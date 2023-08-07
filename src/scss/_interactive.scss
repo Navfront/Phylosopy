@@ -1,0 +1,98 @@
+.interactive-underline {
+  position: relative;
+  transition: 0.2s ease-in opacity;
+
+  &::after {
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid currentColor;
+    transform-origin: left;
+    transition: 0.2s ease-in transform;
+    transform: scale(0);
+  }
+
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    &::after {
+      transform: scale(1);
+    }
+
+    &:active {
+      &::after {
+        transform: scale(1);
+      }
+    }
+  }
+}
+
+.interactive-opacity {
+  transition: 0.2s ease-in opacity;
+
+  &:active {
+    opacity: 0.5;
+    &::after,
+    &::before {
+      opacity: 0.5;
+    }
+  }
+}
+
+.interactive-color {
+  transition: 0.2s ease-in color;
+
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    color: $color-brand-green;
+  }
+}
+
+.interactive-scale {
+  transition: 0.15s ease-in transform, 0.15s ease-in opacity;
+
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    transform: scale(1.05);
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.interactive-color-dark {
+  transition: 0.15s ease-in color, 0.15s ease-in opacity;
+
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    color: $color-brand-blue-dark;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.interactive-bounce {
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    animation-name: bounce;
+    animation-timing-function: cubic-bezier(0.28, 0.84, 0.42, 1);
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+}
+
+.interactive-bg-color {
+  transition: 0.15s ease-in color, 0.15s ease-in background-color,
+    0.15s ease-in opacity;
+  &:focus-visible:not(:active),
+  &:hover:not(:focus):not(:active) {
+    color: $color-white;
+    background-color: $color-accent;
+  }
+  &:active {
+    opacity: 0.7;
+  }
+}

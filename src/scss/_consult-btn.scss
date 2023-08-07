@@ -1,0 +1,11 @@
+.consult-btn {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 68px;
+  height: 68px;
+  color: $color-light;
+  background: $bg-gradient;
+  cursor: pointer;
+}

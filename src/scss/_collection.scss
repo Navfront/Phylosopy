@@ -1,0 +1,24 @@
+.collection {
+  border-radius: $b-radius;
+  padding: 100px 0;
+  background-color: $color-white;
+  color: $color-primary;
+
+  @media (max-width: $media-medium) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: $media-smart) {
+    padding: 40px 0;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+    text-align: center;
+
+    @media (max-width: $media-smart) {
+      margin-bottom: 50px;
+      text-align: start;
+    }
+  }
+}

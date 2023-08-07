@@ -1,0 +1,51 @@
+.helper {
+  position: relative;
+  border-radius: $b-radius;
+  background-image: url("../img/decor/logo-decor-op.svg"), $bg-gradient2;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right -40px center, left top;
+  background-size: 360px 205px, auto;
+  padding: 30px;
+  color: $color-white;
+
+  @media (max-width: $media-smart) {
+    background-position: bottom -20px center, left top;
+  }
+
+  &__title {
+    margin-bottom: 4px;
+
+    @media (max-width: $media-tablet) {
+      font-size: 30px;
+    }
+
+    @media (max-width: $media-medium) {
+      margin-bottom: 20px;
+      max-width: 54%;
+      font-size: 36px;
+    }
+  }
+
+  &__descr {
+    margin-bottom: 20px;
+    opacity: 0.5;
+
+    @media (max-width: $media-tablet) {
+      font-size: 20px;
+    }
+
+    @media (max-width: $media-medium) {
+      margin-bottom: 40px;
+      max-width: 470px;
+      font-size: 24px;
+    }
+  }
+
+  &__btn {
+    @media (max-width: $media-smart) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+  }
+}

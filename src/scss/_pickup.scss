@@ -1,0 +1,55 @@
+.pickup {
+  border-radius: $b-radius;
+  padding: 30px;
+  width: 341px;
+  min-height: 221px;
+  background-color: $color-light;
+  color: $color-accent;
+
+  &__title {
+    @include typography-title-sm();
+    margin-bottom: 60px;
+    padding-right: 60px;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60px 60px;
+    background-image: url("../img/decor/house.svg");
+    min-height: 60px;
+  }
+}
+
+.pickup--section {
+  padding: 20px;
+  display: none;
+  width: 100%;
+  min-height: 220px;
+  background-color: $color-accent;
+  color: $color-white;
+
+  @media (max-width: $media-medium) {
+    display: block;
+  }
+
+  .pickup__title {
+    margin-bottom: 60px;
+    padding-right: 0;
+    padding-bottom: 85px;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    background-size: 60px 60px;
+    background-image: url("../img/decor/house-section.svg");
+
+    @media (max-width: $media-medium) {
+      @include typography-title-tab();
+    }
+
+    @media (max-width: $media-smart) {
+      @include typography-title-sm();
+    }
+  }
+
+  .pickup__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}

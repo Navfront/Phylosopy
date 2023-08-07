@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="page" lang="ru">
+<html class="page index" lang="ru">
 @@include("./_head.html", {
 title: "Phylosophy Idealistov",
 styles: "css/style.index.min.css"
@@ -9,10 +9,480 @@ styles: "css/style.index.min.css"
   @@include("./_header.html", {
   logourl: "#"
   })
+  <div class="page__backdrop js-backdrop">
+    <main class="page__main main index__main">
+      <section class="hero section">
+        <div class="hero__slider swiper js-hero-slider">
+          <ul class="swiper-wrapper list-reset">
+            <li class="swiper-slide">
+              <img src="img/hero/p1.jpg" alt="Проект жилого комплекса" width="1920" height="1080" />
+            </li>
+            <li class="swiper-slide">
+              <img src="img/hero/p2.jpg" alt="Проект жилого комплекса" width="1920" height="1080" />
+            </li>
+            <li class="swiper-slide">
+              <img src="img/hero/p3.jpg" alt="Проект жилого комплекса" width="1920" height="1080" />
+            </li>
+          </ul>
+          <div class="js-hero-slider-pagination swiper-pagination hero__slider-pagination"></div>
+        </div>
 
-  @@include("./_footer.html", {
-  logourl: "#"
-  })
+        <div class="container">
+          <div class="hero__wrapper">
+            <h1 class="hero__title main-heading">
+              Философия идеалистов
+              <span class="hero__subtitle main-subheading">Опытный девелопер в Свердловской
+                области</span>
+            </h1>
+            <p class="hero__descr text-regular">
+              Расширяем границы возможного в девелопменте — создаём wow-эффект, а не загоняем жильё
+              в рамки. Мы идеалисты, как и наши покупатели, и готовы к обязательствам, которые
+              на нас накладывает такое название.
+            </p>
+
+          </div>
+          <aside class="hero__pickup pickup">
+            <h2 class="pickup__title">Подобрать квартиру</h2>
+            <a class="arrow-link interactive-opacity" href="#">
+              <div class="arrow-link__icons">
+                <svg class="arrow-link__svg" width="77" height="43">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="img/sprite.svg#icon-arrowrect">
+                  </use>
+                </svg>
+              </div>
+              Подобрать
+            </a>
+          </aside>
+        </div>
+        <div class="container hero__consolut-btn-wrap">
+          <button class="hero__consult-btn consult-btn interactive-bounce interactive-opacity">
+            <span class="visually-hidden">Получить консультацию</span>
+            <svg class="icon" width="32" height="32">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="img/sprite.svg#icon-chat">
+              </use>
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <aside class="pickup pickup--section section">
+        <div class="container pickup__wrapper">
+          <h2 class="pickup__title">Подобрать квартиру</h2>
+          <a class="arrow-link arrow-link--light interactive-opacity" href="#">
+            <div class="arrow-link__icons">
+              <svg class="arrow-link__svg" width="77" height="43">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="img/sprite.svg#icon-arrowrect">
+                </use>
+              </svg>
+            </div>
+            Подобрать
+          </a>
+        </div>
+      </aside>
+
+      <section class="advantages section">
+        <div class="container">
+          <div class="advantages__top">
+            <h2 class="section__title advantages__title text-h2">
+              Девелопер с философией
+            </h2>
+            <p class="advantages__subtitle text-subtitle">Новое имя знакомого девелопера</p>
+            <p class="advantages__descr text-regular">Ранее мы работали под брендом — группа
+              компаний
+              «Жилстрой». Мы обновили название, чтобы оно отвечало нашему мировоззрению —
+              мы не просто
+              строим жильё, а с вниманием к деталям создаём комфортные условия, в которых люди
+              счастливы.</p>
+          </div>
+          <dl class="advantages__cards list-reset">
+            <div class="advantages__card">
+              <dt class="advantages__dt text-big">2009</dt>
+              <dd class="advantages__dd text-small">Начало пути</dd>
+            </div>
+            <div class="advantages__card">
+              <dt class="advantages__dt text-big">8</dt>
+              <dd class="advantages__dd text-small">Проектов</dd>
+            </div>
+            <div class="advantages__card ">
+              <dt class="advantages__dt text-big">
+                <span>50</span>
+                <span class="advantages__units">тыс.
+                  м<sup>2</sup></span>
+              </dt>
+              <dd class="advantages__dd text-small">Жилой площади</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="collection section">
+        <div class="container">
+          <h2 class="section__title collection__title text-h2">
+            Коллекция квартир
+          </h2>
+          <form class="collection__form collection-form form" action="#" method="post">
+            <div class="collection__fieldset form__fieldset">
+              <label class="collection-form__label form__label">
+                <span class="collection-form__label-text form__label-text">Выберите дом</span>
+                <select class="form__select js-collection-select" name="project">
+                  <option class="form__select-option" value="">Показать все</option>
+                  <option class="form__select-option" value="zagvozdkina">Екатеринбург,
+                    дом на Жуковского
+                  </option>
+                  <option class="form__select-option" value="zhukovskogo">Екатеринбург,
+                    ЖК на Черкасской</option>
+                  <option class="form__select-option" value="pervomai">Березовский,
+                    дом на Загвоздкина</option>
+                  <option class="form__select-option" value="cherkas">Березовский, ЖК «Первомайский»
+                  </option>
+                </select>
+              </label>
+            </div>
+            <div class="collection__fieldset form__fieldset collection-form__rooms">
+              <span class="collection__legend form__legend">Укажите количество комнат</span>
+              <label class="collection-form__label form__label">
+                <span>Ст</span>
+                <input class="collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+              <label class="collection-form__label form__label">
+                <span>1</span>
+                <input class=" collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+              <label class="collection-form__label form__label">
+                <span>2</span>
+                <input class=" collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+              <label class="collection-form__label form__label">
+                <span>3</span>
+                <input class=" collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+              <label class="collection-form__label form__label">
+                <span>4+</span>
+                <input class="collection-form__radio form__radio" type="radio" name="rooms">
+              </label>
+            </div>
+            <div class="collection__fieldset form__fieldset">
+              <span class="collection-form__legend form__legend">Задайте площадь м2</span>
+              <div class="form__slider slider js-square-slider">
+                <label class="form__label-from slider__from">
+                  <span class="form__slider-descr slider__descr">от</span>
+                  <input class="form__slider-input slider__input js-slider-from" name="price-from"
+                    type="text" min="0" max="99999" step=" 1" value="34,78" />
+                  <span class="form__slider-descr slider__descr">м<sup>2</sup></span>
+                </label>
+                <label class="slider__to form__label-to">
+                  <span class="form__slider-descr slider__descr">до</span>
+                  <input class="form__slider-input slider__input js-slider-to" name="price-from"
+                    type="text" min="0" max="99999" step="1" value="78,14" />
+                  <span class="form__slider-descr slider__descr">м<sup>2</sup></span>
+                </label>
+                <div class="form__inner-slider slider__slider js-slider"></div>
+              </div>
+            </div>
+
+            <div class="collection__fieldset form__fieldset">
+              <span class="collection-form__legend form__legend">Укажите этаж</span>
+              <div class="form__slider slider js-level-slider">
+                <label class="form__label-from slider__from">
+                  <input class="form__slider-input slider__input js-slider-from" name="price-from"
+                    type="number" min="1" max="17" step="1" value="1" />
+                </label>
+                <label class="slider__to form__label-to">
+                  <input class="form__slider-input slider__input js-slider-to" name="price-from"
+                    type="number" min="1" max="17" step="1" value="17" />
+                </label>
+                <div class="form__inner-slider slider__slider js-slider"></div>
+              </div>
+            </div>
+            <button
+              class="collection-form__submit arrow-link arrow-link--rounded interactive-opacity"
+              type="submit">
+              <div class="arrow-link__icons">
+                <svg class="arrow-link__svg" width="77" height="43">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="img/sprite.svg#icon-arrowrect">
+                  </use>
+                </svg>
+              </div>
+              Показать ... квартир
+
+            </button>
+            <!-- <p class="collection-form__message">Найдено 2 456 планировок</p>
+            <button class="collection-form__clear-btn js-filter-clear interactive-color-dark"
+              type="button">Очистить фильтр
+              <svg class="collection-form__clear-btn-icon" width="24" height="24">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="img/sprite.svg#icon-close">
+                </use>
+              </svg>
+            </button> -->
+          </form>
+        </div>
+      </section>
+      <section class="projects section">
+        <div class="container projects__wrapper">
+          <h2 class="projects__title section__title text-h2">Проекты</h2>
+          <ul class="projects__list list-reset">
+            <li class="projects__item project-card">
+              <figure class="project-card__figure">
+                <a class="project-card__img-link" href="#">
+                  <img class="project-card__img" src="img/projects/p1.jpg" width="700" height="787"
+                    alt="Дом на Загвоздкина">
+                  <span class="project-card__hover-text">Современный кирпичный дом в тихом центре
+                    с закрытым двором, продуманными планировками и удобными дизайнерскими
+                    холлами</span>
+                </a>
+                <figcaption class="project-card__figcaption">
+                  <span class="project-card__city text-regular">Березовский</span>
+                  <span class="project-card__title text-subtitle">Дом на Загвоздкина</span>
+                </figcaption>
+              </figure>
+              <ul class="project-card__links list-reset">
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Готовые
+                    квартиры</a>
+                </li>
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Акция</a>
+                </li>
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Ипотека</a>
+                </li>
+              </ul>
+            </li>
+            <li class="projects__item project-card">
+              <figure class="project-card__figure">
+                <a class="project-card__img-link" href="#">
+                  <img class="project-card__img" src="img/projects/p2.jpg" width="700" height="787"
+                    alt="Дом на Жуковского">
+                  <span class="project-card__hover-text">Высотка с двухуровневым паркингом
+                    и кладовыми в 20 минутах от центра Екатеринбурга. Прямо в доме — соседский центр
+                    для досуга жителей.</span>
+                </a>
+                <figcaption class="project-card__figcaption">
+                  <span class="project-card__city text-regular">Екатеринбург</span>
+                  <span class="project-card__title text-subtitle">Дом на Жуковского</span>
+                </figcaption>
+              </figure>
+              <ul class="project-card__links list-reset">
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Готовые
+                    квартиры</a>
+                </li>
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Акция</a>
+                </li>
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Ипотека</a>
+                </li>
+              </ul>
+            </li>
+            <li class="projects__item project-card">
+              <figure class="project-card__figure">
+                <a class="project-card__img-link" href="#">
+                  <img class="project-card__img" src="img/projects/p3.jpg" width="700" height="787"
+                    alt="ЖК «Первомайский»">
+                  <span class="project-card__hover-text">Кирпичные дома с хорошей звукоизоляцией
+                    в 15 минутах от Екатеринбурга с видом на лес. Во дворе — детские площадки и зоны
+                    отдыха.</span>
+                </a>
+                <figcaption class="project-card__figcaption">
+                  <span class="project-card__city text-regular">Березовский</span>
+                  <span class="project-card__title text-subtitle">ЖК «Первомайский»</span>
+                </figcaption>
+              </figure>
+              <ul class="project-card__links list-reset">
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Готовые
+                    квартиры</a>
+                </li>
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Акция</a>
+                </li>
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Ипотека</a>
+                </li>
+              </ul>
+            </li>
+            <li class="projects__item project-card">
+              <figure class="project-card__figure">
+                <a class="project-card__img-link" href="#">
+                  <img class="project-card__img" src="img/projects/p4.jpg" width="700" height="787"
+                    alt="ЖК на Черкасской">
+                  <span class="project-card__hover-text">Три 24–25-этажных здания в центре
+                    мегаполиса на территории реновации — в шаговой доступности вся инфраструктура.
+                    В доме — паркинг и коммерческие помещения.</span>
+                </a>
+                <figcaption class="project-card__figcaption">
+                  <span class="project-card__city text-regular">Екатеринбург</span>
+                  <span class="project-card__title text-subtitle">ЖК на Черкасской</span>
+                </figcaption>
+              </figure>
+              <ul class="project-card__links list-reset">
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Готовые
+                    квартиры</a>
+                </li>
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Акция</a>
+                </li>
+                <li class="project-card__item">
+                  <a class="project-card__link interactive-bg-color" href="#">Ипотека</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <aside class="projects__helper helper">
+            <h2 class="helper__title text-title-h3">Поможем с выбором</h2>
+            <p class="helper__descr text-subtitle">Оставьте заявку, наш менеджер поможет вам</p>
+            <button
+              class="helper__btn projects__btn arrow-link arrow-link--rounded interactive-opacity">
+
+              <div class="arrow-link__icons">
+                <svg class="arrow-link__svg" width="77" height="43">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                    xlink:href="img/sprite.svg#icon-arrowrect">
+                  </use>
+                </svg>
+              </div>
+              Оставить заявку
+
+            </button>
+          </aside>
+        </div>
+      </section>
+      <section class="howtobuy section">
+        <div class="container howtobuy__wrapper">
+          <h2 class="howtobuy__title section__title text-title-h3">Способ покупки</h2>
+          <p class="howtobuy__descr text-regular">Работаем в партнерстве с надежными банками, чтобы
+            обеспечить
+            выгодные условия и уверенность в одобрении ипотеки. Можно приобрести квартиру в
+            субсидированную ипотеку с господдержкой, а также по программе военной ипотеки.</p>
+          <a href="#"
+            class="howtobuy__link arrow-link arrow-link--rounded interactive-opacity text-regular">
+            <div class="arrow-link__icons">
+              <svg class="arrow-link__svg" width="77" height="43">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink"
+                  xlink:href="img/sprite.svg#icon-arrowrect">
+                </use>
+              </svg>
+            </div>
+            Рассчитайте ипотеку
+          </a>
+        </div>
+        <div class="container howtobuy__slider-container">
+          <div class="howtobuy__slider js-howtobuy-slider">
+            <dl class="howtobuy__slider-wrapper list-reset">
+              <div class="howtobuy__card howtobuy__card--home">
+                <dt class="howtobuy__dt">от 3,9%</dt>
+                <dd class="howtobuy__dd text-regular">на квартиры</dd>
+              </div>
+              <div class="howtobuy__card howtobuy__card--calendar">
+                <dt class="howtobuy__dt">до 30 лет</dt>
+                <dd class="howtobuy__dd text-regular">срок кредита</dd>
+              </div>
+              <div class="howtobuy__card howtobuy__card--contract">
+                <dt class="howtobuy__dt">от 6%</dt>
+                <dd class="howtobuy__dd text-regular">первые два года без процентов</dd>
+              </div>
+              <div class="howtobuy__card howtobuy__card--clock">
+                <dt class="howtobuy__dt">1–2 дня</dt>
+                <dd class="howtobuy__dd text-regular">решение банка</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+        <div class="container">
+          <div class="howtobuy__slider-controls">
+            <button class="swiper-button-prev howtobuy__slider-prev" type="button">
+              <span class="visually-hidden">предыдущий слайд</span>
+            </button>
+            <button class="swiper-button-next howtobuy__slider-next" type="button">
+              <span class="visually-hidden">следующий слайд</span>
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="adv-info section">
+        <div class="container">
+          <h2 class="visually-hidden">Цели и достижения</h2>
+          <ul class="adv-info__list list-reset">
+            <li
+              class="adv-info__item adv-info__item--left-2x adv-card adv-card--hover adv-card--accuraty"
+              tabindex="0">
+              <div class="adv-card__content">
+                <h3 class="adv-card__title text-title">Идеальная точность</h3>
+                <p class="adv-card__subtitle text-subheading">100% домов сданы в срок</p>
+                <span class="adv-card__hover-text text-regular">Всегда сдаём дома вовремя
+                  и с высоким качеством.
+                  Именно поэтому нам доверили реализацию региональной адресной программы
+                  «Переселение
+                  граждан на территории Свердловской области из аварийного жилищного фонда
+                  в 2013–2017 гг». Мы выполнили свои обязательства блестяще.</span>
+              </div>
+            </li>
+            <li class="adv-info__item adv-card adv-card--decor adv-card--crane">
+              <h3 class="adv-card__title text-title">Удовольствие выбора</h3>
+              <p class="adv-card__subtitle text-subheading">Более 70 000 <sup>м2</sup> в активной
+                фазе</p>
+              <span class="adv-card__info-text text-regular">Мы строим четыре жилых комплекса
+                в Екатеринбурге
+                и в Березовском. Разнообразие проектов позволяет с точностью подобрать идеальную
+                квартиру на любой вкус и жизненный сценарий.</span>
+            </li>
+            <li
+              class="adv-info__item adv-info__item--right-2x adv-card adv-card--hover adv-card--care"
+              tabindex="0">
+              <div class="adv-card__content">
+                <h3 class="adv-card__title text-title">Забота</h3>
+                <p class="adv-card__subtitle text-subheading">Создаём комфортную атмосферу</p>
+                <span class="adv-card__hover-text text-regular">В нашем офисе атмосфера тепла
+                  и понимания.
+                  Мы угостим
+                  кофе или чаем, в беседе выявим пожелания по планировке и подберём ту, что подойдёт
+                  оптимально. Покупка станет простой, даже если вы выбираете квартиру впервые</span>
+              </div>
+            </li>
+            <li class="adv-info__item adv-card adv-card--decor adv-card--handshake">
+              <h3 class="adv-card__title text-title">Актуальность</h3>
+              <p class="adv-card__subtitle text-subheading">Всегда в авангарде рынка</p>
+              <span class="adv-card__info-text text-regular">Внедряем передовые технологии продаж:
+                нашим клиентам
+                доступна онлайн-консультация и дистанционная сделка. Всегда в курсе актуальных
+                ипотечных предложений, чтобы обеспечить наиболее выгодные условия сделки.</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="callback-section section">
+        <h2 class="visually-hidden">Обратная связь</h2>
+        <a class="callback-section__phone contact-phone interactive-underline interactive-opacity text-h3"
+          href="tel:+79122888444">
+          <span class="contact-phone__numstart">+7 912</span> 288-84-44
+        </a>
+        <button
+          class="callback-section__call-btn call-btn call-btn--withtext js-call interactive-opacity">
+          <svg class="call-btn__icon" width="32" height="32">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink"
+              xlink:href="img/sprite.svg#icon-phonecall">
+            </use>
+          </svg>
+          <span class="call-btn__text">Заказать звонок</span>
+        </button>
+      </section>
+    </main>
+    @@include("./_footer.html", {
+    logourl: "#"
+    })
+  </div>
+  <script src="js/accordion.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script src="js/choices.min.js"></script>
+  <script src="js/nouislider.min.js"></script>
+  <script src="js/bundle.min.js"></script>
+
 </body>
 
 </html>

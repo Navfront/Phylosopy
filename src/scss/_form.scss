@@ -1,0 +1,126 @@
+.form {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+
+  &__fieldset {
+    position: relative;
+    margin: 0;
+    border: none;
+    padding: 0;
+  }
+
+  &__fieldset:has(.form__radio) {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: start;
+    gap: 8px;
+  }
+
+  &__label-text,
+  &__legend {
+    position: absolute;
+    left: 0;
+    top: -8px;
+
+    @include typography-caption();
+    color: $color-secondary;
+    transform: translate(0, -15px);
+  }
+
+  &__label {
+    background-color: $color-light;
+    cursor: pointer;
+  }
+
+  &__label:has(.form__radio) {
+    border-radius: $b-rad-sm;
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    background-color: $color-light;
+    transition: 0.15s ease-in outline-color, 0.15s ease-in background-color;
+
+    &:has(.form__radio:focus-visible:not(:active)),
+    &:has(.form__radio:hover:not(:focus):not(:active)),
+    &:has(.form__radio:active) {
+      background-color: $color-bg-hov;
+    }
+  }
+
+  &__label:has(.form__radio:checked) {
+    outline-color: $color-grey;
+  }
+
+  &__select {
+    background-color: $color-light;
+  }
+
+  &__slider {
+    position: relative;
+    border-radius: $b-rad-sm;
+    padding: 16px 12px;
+    display: grid;
+    height: 100%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr, 1px;
+    align-items: center;
+    background-color: $color-light;
+  }
+
+  &__label-to {
+    justify-self: end;
+  }
+
+  &__inner-slider {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 5px;
+    align-self: end;
+    justify-self: stretch;
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
+
+  &__slider-descr {
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+  }
+
+  &__slider-input {
+    width: 48px;
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 125%;
+  }
+
+  &__label-text {
+    display: inline-block;
+  }
+
+  &__radio {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}

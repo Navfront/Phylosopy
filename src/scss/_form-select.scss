@@ -1,0 +1,111 @@
+.form-select {
+  position: relative;
+  border-radius: $b-rad-sm;
+  background-color: $color-light;
+  outline: none;
+  transition: 0.25s ease-in background-color;
+  cursor: pointer;
+
+  &:not(.is-open) {
+    overflow: hidden;
+  }
+
+  &__inner {
+    position: relative;
+    padding-right: 40px;
+    border-radius: $b-rad-sm;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      right: 20px;
+      top: 47%;
+      border: 1px solid $color-primary;
+      border-top: none;
+      border-right: none;
+      display: block;
+      height: 8px;
+      width: 8px;
+      transform-origin: 2px 6px;
+      transform: translateY(-75%) rotate(-45deg);
+      transition: 0.15s ease-in transform;
+    }
+  }
+
+  &__list--single .form-select__item {
+    padding: 16px 20px;
+    max-width: 230px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: 0.15s ease-in color;
+  }
+
+  &.is-open &__list--single .form-select__item {
+    color: $color-grey-dark;
+  }
+
+  &__list--dropdown {
+    position: absolute;
+    z-index: 99;
+    top: 50px;
+    border-bottom-left-radius: $b-rad-sm;
+    border-bottom-right-radius: $b-rad-sm;
+    width: 100%;
+    transform: scaleY(0);
+    transform-origin: top;
+    opacity: 0;
+    background-color: $color-light;
+    transition: 0.15s ease-in opacity, 0.15s ease-in transform;
+  }
+
+  &__list--dropdown.is-active {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+
+  &__list--dropdown .form-select__item {
+    border-top: 1px solid #2a2a3046;
+    padding: 16px 20px;
+    color: $color-primary;
+    transition: 0.15s ease-in color;
+  }
+
+  .form-select__inner::before {
+    transition: 0.15s ease-in border-color, 0.15s ease-in transform;
+  }
+
+  // &:focus-visible:not(.is-open) .form-select__inner::before,
+  &:focus-visible:not(.is-open),
+  &:focus-visible:not(.is-open) .form-select__item {
+    background-color: $color-bg-hov;
+  }
+
+  // &:hover:not(:focus):not(.is-open) .form-select__inner::before,
+  &:hover:not(:focus):not(.is-open) .form-select__item,
+  &:hover:not(:focus):not(.is-open),
+  &__item.is-highlighted:not(:focus) {
+    background-color: $color-bg-hov;
+  }
+
+  // &:active:not(:focus):not(.is-open) .form-select__inner::before,
+  &:active:not(:focus):not(.is-open) .form-select__item,
+  &__item:active:not(:focus) {
+    background-color: $color-bg-hov;
+  }
+
+  &__item--choice.is-selected {
+    display: none;
+  }
+
+  &.is-open .form-select__inner::before {
+    transform: translateY(-47%) rotate(135deg);
+  }
+
+  &.is-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
